@@ -114,4 +114,6 @@ COPY src/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
 COPY src/entrypoint.sh /opt/entrypoint.sh
 
+RUN chmod +x /opt/entrypoint.sh
+
 ENTRYPOINT ["/opt/entrypoint.sh"]

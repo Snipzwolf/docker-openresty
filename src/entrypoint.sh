@@ -20,4 +20,4 @@ GID=${GID:-500};
 id -g $GROUPNAME &>/dev/null || (groupadd -r $GROUPNAME -g $GID && echo "Created group $GROUPNAME:$GID");
 id -u $USERNAME &>/dev/null || (useradd $USERNAME -rMN -u $UID -g $GID && echo "Created user $USERNAME:$UID");
 
-/usr/local/openresty/bin/openresty", "-g", "daemon off;
+/usr/local/openresty/bin/openresty -g "daemon off;"
