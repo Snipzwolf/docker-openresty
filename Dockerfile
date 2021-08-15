@@ -180,6 +180,8 @@ COPY src/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 #CMD ["/usr/local/openresty/bin/openresty", "-g", "daemon off;"]
 COPY src/entrypoint.sh /opt/entrypoint.sh
 
+RUN chmod +x /opt/entrypoint.sh
+
 ENTRYPOINT ["/opt/entrypoint.sh"]
 
 # Use SIGQUIT instead of default SIGTERM to cleanly drain requests
